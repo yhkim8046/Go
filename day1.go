@@ -35,4 +35,30 @@ func main() {
 	}
 	fmt.Println(result)
 
+	// 타입과 길이가 고전인 배열
+	var stricted [3]int = [3]int{1, 2, 3}
+
+	fmt.Println(stricted)    // 1,2,3
+	fmt.Println(stricted[0]) //1
+
+	stricted[1] = 99
+
+	fmt.Println(stricted[1])
+
+	// 길이가 가변인 슬라이스
+	s := []int{10, 20, 30}
+	fmt.Println(s, len(s), cap(s))
+
+	s = append(s, 40, 50)
+	fmt.Println(s)
+
+	// 자르기
+	sub := s[1:4]
+	fmt.Println(sub)
+
+	//make 생성
+
+	t := make([]int, 0, 5) // len = 0 cap =5
+	t = append(t, 1, 2)
+	fmt.Println(t, len(t), cap(t))
 }
